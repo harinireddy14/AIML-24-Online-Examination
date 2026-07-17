@@ -1,0 +1,341 @@
+/* ==============================
+   MAIN DASHBOARD LAYOUT
+============================== */
+
+.portal-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7fc;
+  font-family: Arial, sans-serif;
+}
+
+/* ==============================
+   LEFT SIDEBAR
+============================== */
+
+.portal-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #071a3d 0%,
+    #0b2d63 100%
+  );
+  color: white;
+  padding: 25px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.portal-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 8px 25px;
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.portal-logo-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.portal-logo h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.portal-logo span {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ==============================
+   SIDEBAR MENU
+============================== */
+
+.portal-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 28px;
+  flex: 1;
+}
+
+.portal-menu-item {
+  color: #dce8ff;
+  text-decoration: none;
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.portal-menu-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  transform: translateX(4px);
+}
+
+.portal-menu-item:first-child {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+/* ==============================
+   LOGOUT BUTTON
+============================== */
+
+.portal-logout {
+  width: 100%;
+  border: none;
+  padding: 13px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 25px;
+  transition: 0.25s;
+}
+
+.portal-logout:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ==============================
+   RIGHT MAIN AREA
+============================== */
+
+.portal-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+}
+
+/* ==============================
+   TOP HEADER
+============================== */
+
+.portal-header {
+  min-height: 155px;
+  padding: 30px 40px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 28, 70, 0.96),
+      rgba(20, 78, 150, 0.88)
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(255, 255, 255, 0.16),
+      transparent 35%
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  box-shadow: 0 5px 18px
+    rgba(12, 42, 85, 0.15);
+}
+
+.portal-header-small {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+.portal-header-title h1 {
+  margin: 10px 0 0;
+  font-size: 32px;
+}
+
+/* ==============================
+   PROFILE SECTION
+============================== */
+
+.portal-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.13);
+  padding: 10px 18px 10px 10px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+}
+
+.portal-profile-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  color: #123b76;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 3px 10px
+    rgba(0, 0, 0, 0.15);
+}
+
+.portal-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-profile-info strong {
+  font-size: 14px;
+}
+
+.portal-profile-info span {
+  font-size: 12px;
+  margin-top: 3px;
+  opacity: 0.75;
+}
+
+/* ==============================
+   MAIN PAGE CONTENT
+============================== */
+
+.portal-content {
+  padding: 35px 40px;
+}
+
+/* ==============================
+   IMPROVED DASHBOARD CARDS
+============================== */
+
+.portal-content .cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.portal-content .card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid #e6ecf5;
+  box-shadow:
+    0 7px 22px rgba(25, 55, 100, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.portal-content .card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 28px rgba(25, 55, 100, 0.13);
+}
+
+.portal-content .card h2 {
+  color: #102c57;
+  margin-top: 0;
+}
+
+.portal-content .card p {
+  color: #65758b;
+  line-height: 1.6;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.portal-content .login-btn {
+  background: #123f7a;
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 11px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.portal-content .login-btn:hover {
+  background: #0b2c59;
+  transform: translateY(-1px);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 900px) {
+
+  .portal-sidebar {
+    width: 210px;
+  }
+
+  .portal-main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+  }
+
+  .portal-header {
+    padding: 25px;
+  }
+
+  .portal-content {
+    padding: 25px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .portal-layout {
+    display: block;
+  }
+
+  .portal-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .portal-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .portal-header {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portal-profile {
+    align-self: flex-end;
+  }
+
+  .portal-content {
+    padding: 20px;
+  }
+
+}
